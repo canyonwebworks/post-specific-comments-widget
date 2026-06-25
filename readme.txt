@@ -3,8 +3,8 @@ Contributors: littlepackage
 Donate link: https://www.paypal.me/littlepackage
 Tags: comment, excerpt, feedback, guest, guestbook, page, post, recent, testimonial, widget, specific, avatar, gravatar
 Requires at least: 4
-Tested up to: 5.1.1
-Stable tag: 2.0
+Tested up to: 5.2.2
+Stable tag: 2.0.1
 Text Domain: post-specific-comments-widget
 License: GPLv3 or later
 License URI: http://www.opensource.org/licenses/gpl-license.php
@@ -133,3 +133,7 @@ Shortcodes added!
 * Testing to WP 5.1.1
 * PHP error fixes
 * Localization issue fixes
+
+= 2.0.1 July 30 2019 =
+* Testing to WP 5.2.2
+* Update author & plugin URI

@@ -1,11 +1,9 @@
 <?php
 /*
  * Plugin Name: Post-Specific Comments Widget (PSCW)
- * Plugin URI: http://littlepackage.github.io/post-specific-comments-widget
  * Description: A widget that displays formattable recent comments (and even gravatars) from a specific post or page ID or all. Display format is highly customizable with shortcodes and unique CSS tags. 
- * Version: 2.0
+ * Version: 2.0.1
  * Author: Little Package
- * Author URI: http://www.little-package.com/pscw
  * Donate link: https://www.paypal.me/littlepackage
  * License: GPLv3 or later
  * License URI: http://www.opensource.org/licenses/gpl-license.php
@@ -107,17 +105,17 @@ class Post_Specific_Comments_Widget extends WP_Widget {
 				$aRecentCommentAuthor = get_comment_author_link();
 				$aRecentCommentDate = get_comment_date( null, $comment->comment_ID );
 				                
-				$aRecentCommentTxt = trim( mb_substr( strip_tags( apply_filters( 'comment_text', $aRecentComment->comment_content )), 0, $excerpt_length ));
+				$aRecentCommentTxt = trim( mb_substr( strip_tags( apply_filters( 'comment_text', $aRecentComment->comment_content ) ), 0, $excerpt_length ));
 				if ( strlen( $aRecentComment->comment_content ) > $excerpt_length ){
 					$aRecentCommentTxt .= $excerpt_trail;
 				}
 	
 				if ( $instance['comment_format'] == "author-post" ) {
-					$output .=  '<li class="recentcomments pscw-recentcomments">' . sprintf(__('%1$s on %2$s', 'post-specific-comments-widget'), $aRecentCommentAuthor, '<a href="' . esc_url( get_comment_link($comment->comment_ID) ) . '" class="pscw-link">' . get_the_title($comment->comment_post_ID) . '</a>') . '</li>';
+					$output .=  '<li class="recentcomments pscw-recentcomments">' . sprintf(__('%1$s on %2$s', 'post-specific-comments-widget'), $aRecentCommentAuthor, '<a href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '" class="pscw-link">' . get_the_title($comment->comment_post_ID) . '</a>') . '</li>';
 				}
 
 				if ( $instance['comment_format'] == "author-excerpt" ) {
-					$output .= '<li class="recentcomments pscw-recentcomments">' . sprintf(__( '<span class="recentcommentsauthor">%1$s</span> said %2$s', 'post-specific-comments-widget' ), $aRecentCommentAuthor, '<a href="' . esc_url( get_comment_link($comment->comment_ID) ) . '" class="pscw-link">' . $aRecentCommentTxt . '</a>') . '</li>';	
+					$output .= '<li class="recentcomments pscw-recentcomments">' . sprintf(__( '<span class="recentcommentsauthor">%1$s</span> said %2$s', 'post-specific-comments-widget' ), $aRecentCommentAuthor, '<a href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '" class="pscw-link">' . $aRecentCommentTxt . '</a>') . '</li>';	
 				}
 
 				if ( $instance['comment_format'] == "post-excerpt" ) {
@@ -125,7 +123,7 @@ class Post_Specific_Comments_Widget extends WP_Widget {
 				}
 
 				if ( $instance['comment_format'] == "excerpt-author" ) {
-					$output .= '<li class="recentcomments pscw-recentcomments">' . sprintf(__( '<span class="recentcommentstitle">%1$s</span> - %2$s', 'post-specific-comments-widget' ), '<a href="' . esc_url( get_comment_link($comment->comment_ID) ) . '" class="pscw-link">' . $aRecentCommentTxt . '</a>', $aRecentCommentAuthor ) . '</li>';	
+					$output .= '<li class="recentcomments pscw-recentcomments">' . sprintf(__( '<span class="recentcommentstitle">%1$s</span> - %2$s', 'post-specific-comments-widget' ), '<a href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '" class="pscw-link">' . $aRecentCommentTxt . '</a>', $aRecentCommentAuthor ) . '</li>';	
 				}
 				
 				if ( $instance['comment_format'] == "other-format" ) {
@@ -145,7 +143,7 @@ class Post_Specific_Comments_Widget extends WP_Widget {
 					}
 
 					$aRecentCommentTitle = '<span class="recentcommentstitle">' . $aRecentCommentTitle . '</span>';
-					$aRecentCommentTxt = '<a href="' . esc_url( get_comment_link($comment->comment_ID) ) . '" class="pscw-link">' . $aRecentCommentTxt . '</a>';
+					$aRecentCommentTxt = '<a href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '" class="pscw-link">' . $aRecentCommentTxt . '</a>';
 					$output .= '<li class="recentcomments pscw-recentcomments">' . preg_replace( array( '/\[AUTHOR]/','/\[TITLE\]/','/\[EXCERPT\]/','/\[DATE\]/','/\[AVATAR\]|\[AVATAR ([0-9]{0,4})\]/' ), array( $aRecentCommentAuthor, $aRecentCommentTitle, $aRecentCommentTxt, $aRecentCommentDate, $aRecentAvatar ), $other_input ) . '</li>';
 
 				}
