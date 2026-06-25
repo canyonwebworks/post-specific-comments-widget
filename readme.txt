@@ -3,8 +3,8 @@ Contributors: littlepackage
 Donate link: https://www.paypal.me/littlepackage
 Tags: testimonial, feedback, comment, excerpt, guestbook
 Requires at least: 4
-Tested up to: 5.3.2
-Stable tag: 2.1
+Tested up to: 5.5
+Stable tag: 2.1.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -120,7 +120,7 @@ Recommend upgrade to version 2.0.2 for security enhancements; compatible with WP
 = 1.2.4 Feb 2 2017 =
 * Testing to WP 4.7.2
 * Add avatar/gravatar shortcode
-* Allow <br /><p><strong><em> html in custom entry
+* Allow &lt;br /&gt;&lt;p&gt;&lt;strong&gt;&lt;m&gt; html in custom entry
 * Tidy code, update readme.txt
 
 = 2.0 March 25 2019 =
@@ -141,3 +141,6 @@ Recommend upgrade to version 2.0.2 for security enhancements; compatible with WP
 * use en dash instead of hyphen for "excerpt – author" format (more visible)
 * labels work for radio input fields on backend
 * 'pscw_filter_output' filter added to further adjust output before sending to screen
+
+= 2.1.1 September 19 2020 = 
+* Testing to WP 5.5.1

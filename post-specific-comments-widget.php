@@ -2,14 +2,14 @@
 /*
  * Plugin Name: Post-Specific Comments Widget (PSCW)
  * Description: A widget that displays recent comments from a *specific post or page* (or all). Display format is highly customizable with shortcodes, hooks, and unique CSS tags, and includes gravatars. 
- * Version: 2.1
+ * Version: 2.1.1
  * Author: Little Package
  * Donate link: https://www.paypal.me/littlepackage
  * License: GPLv3 or later
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * 
  * Text Domain: post-specific-comments-widget
- * Domain path: /lang
+ * Domain path: lang
  *
  * Copyright 2013-2020 Little Package 
  *		
