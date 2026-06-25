@@ -117,7 +117,7 @@ final class Post_Specific_Comments_Widget extends WP_Widget {
 		if ( 'html5' === $format ) {
 			// The title may be filtered: Strip out HTML and make sure the aria-label is never empty.
 			$title      = trim( strip_tags( $title ) );
-			$aria_label = $title ? $title : $default_title;
+			$aria_label = $title ?: $default_title;
 			$output    .= '<nav role="navigation" aria-label="' . esc_attr( $aria_label ) . '">';
 		}
 
@@ -148,43 +148,46 @@ final class Post_Specific_Comments_Widget extends WP_Widget {
 					$comment_text .= $excerpt_trail;
 				}
 
-				if ( $instance['comment_format'] == "author-post" ) {
-					$output .= sprintf( __( '%1$s on %2$s', 'post-specific-comments-widget' ), $comment_author, '<a href="' . esc_url( get_comment_link( $comment_id ) ) . '" class="pscw-link">' . get_the_title( $comment_post_id ) . '</a>');
-				}
+				if ( isset( $instance['comment_format'] ) ) {
 
-				if ( $instance['comment_format'] == "author-excerpt" ) {
-					$output .= sprintf( __( '<span class="recentcommentsauthor">%1$s</span> said %2$s', 'post-specific-comments-widget' ), $comment_author, '<a href="' . esc_url( get_comment_link( $comment_id ) ) . '" class="pscw-link">' . $comment_text . '</a>');
-				}
-
-				if ( $instance['comment_format'] == "post-excerpt" ) {
-					$output .= '<a href="' . esc_url( get_comment_link( $comment_id ) ) . '" class="pscw-link">' . $comment_text . '</a>';
-				}
-
-				if ( $instance['comment_format'] == "excerpt-author" ) {
-					$output .= sprintf( __( '<span class="recentcommentstitle">%1$s</span> &ndash; %2$s', 'post-specific-comments-widget' ), '<a href="' . esc_url( get_comment_link( $comment_id ) ) . '" class="pscw-link">' . $comment_text . '</a>', $comment_author );
-				}
-
-				if ( $instance['comment_format'] == "other-format" ) {
-					$other_input = empty( $instance['other_input'] ) ? '' : $instance['other_input'];
-
-					if ( strpos( $other_input, '[AVATAR' ) !== FALSE ) {
-
-						preg_match( '~\[AVATAR ([0-9]{0,4})]~', $other_input, $avasize );
-
-						if ( ! empty( $avasize[1] ) ) {
-							$avatarsize = $avasize[1];
-						} else {
-							$avatarsize = '32';
-						}
-						$avatar = '<a href="' . esc_url( get_comment_author_url( $comment ) ) . '" rel="noopener external nofollow" target="_blank">' . get_avatar( $comment, $avatarsize ) . '</a>';
-						$avatar = apply_filters( 'pscw_filter_avatar', $avatar, $comment );
-
+					if ( $instance['comment_format'] == "author-post" ) {
+						$output .= sprintf( __( '%1$s on %2$s', 'post-specific-comments-widget' ), $comment_author, '<a href="' . esc_url( get_comment_link( $comment_id ) ) . '" class="pscw-link">' . get_the_title( $comment_post_id ) . '</a>');
 					}
 
-					$comment_title = '<span class="recentcommentstitle pscw-recentcommentstitle">' . $comment_title . '</span>';
-					$comment_text = '<a href="' . esc_url( get_comment_link( $comment_id ) ) . '" class="pscw-link">' . $comment_text . '</a>';
-					$output .= preg_replace( [ '/\[AUTHOR]/','/\[TITLE]/','/\[LINKED-TITLE]/','/\[EXCERPT]/','/\[DATE]/','/\[AVATAR]|\[AVATAR ([0-9]{0,4})]/' ], [ $comment_author, $comment_title, $linked_comment_title, $comment_text, $comment_date, $avatar ], $other_input );
+					if ( $instance['comment_format'] == "author-excerpt" ) {
+						$output .= sprintf( __( '<span class="recentcommentsauthor">%1$s</span> said %2$s', 'post-specific-comments-widget' ), $comment_author, '<a href="' . esc_url( get_comment_link( $comment_id ) ) . '" class="pscw-link">' . $comment_text . '</a>');
+					}
 
+					if ( $instance['comment_format'] == "post-excerpt" ) {
+						$output .= '<a href="' . esc_url( get_comment_link( $comment_id ) ) . '" class="pscw-link">' . $comment_text . '</a>';
+					}
+
+					if ( $instance['comment_format'] == "excerpt-author" ) {
+						$output .= sprintf( __( '<span class="recentcommentstitle">%1$s</span> &ndash; %2$s', 'post-specific-comments-widget' ), '<a href="' . esc_url( get_comment_link( $comment_id ) ) . '" class="pscw-link">' . $comment_text . '</a>', $comment_author );
+					}
+
+					if ( $instance['comment_format'] == "other-format" ) {
+						$other_input = empty( $instance['other_input'] ) ? '' : $instance['other_input'];
+
+					   if ( strpos( $other_input, '[AVATAR' ) !== FALSE ) {
+
+							preg_match( '~\[AVATAR ([0-9]{0,4})]~', $other_input, $avasize );
+
+							if ( ! empty( $avasize[1] ) ) {
+								$avatarsize = $avasize[1];
+							} else {
+								$avatarsize = '32';
+							}
+							$avatar = '<a href="' . esc_url( get_comment_author_url( $comment ) ) . '" rel="noopener external nofollow" target="_blank">' . get_avatar( $comment, $avatarsize ) . '</a>';
+							$avatar = apply_filters( 'pscw_filter_avatar', $avatar, $comment );
+
+						}
+
+						$comment_title = '<span class="recentcommentstitle pscw-recentcommentstitle">' . $comment_title . '</span>';
+						$comment_text = '<a href="' . esc_url( get_comment_link( $comment_id ) ) . '" class="pscw-link">' . $comment_text . '</a>';
+						$output .= preg_replace( [ '/\[AUTHOR]/','/\[TITLE]/','/\[LINKED-TITLE]/','/\[EXCERPT]/','/\[DATE]/','/\[AVATAR]|\[AVATAR ([0-9]{0,4})]/' ], [ $comment_author, $comment_title, $linked_comment_title, $comment_text, $comment_date, $avatar ], $other_input );
+
+					}
 				}
 				$output .= '</li>';
 			}
@@ -239,10 +242,10 @@ final class Post_Specific_Comments_Widget extends WP_Widget {
 		$title = isset( $instance['title'] ) ? $instance['title'] : '';
 		$number = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
 		$postID = isset( $instance['postID'] ) ? absint( $instance['postID'] ) : '';
-		$comment_format = isset( $instance['comment_format'] ) ? $instance['comment_format'] : 'author-post';
-		$other_input = isset( $instance['other_input'] ) ? $instance['other_input'] : '';
+		$comment_format = $instance['comment_format'] ?? 'author-post';
+		$other_input = $instance['other_input'] ?? '';
 		$excerpt_length = isset( $instance['excerpt_length'] ) ? absint( $instance['excerpt_length'] ) : '60';
-		$excerpt_trail = isset( $instance['excerpt_trail'] ) ? $instance['excerpt_trail'] : '...';
+		$excerpt_trail = $instance['excerpt_trail'] ?? '...';
 		?>
 
 		<!-- WIDGET DISPLAY TITLE -->
