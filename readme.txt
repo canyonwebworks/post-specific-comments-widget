@@ -1,17 +1,18 @@
 === Post-Specific Comments Widget (PSCW) ===
 Contributors: littlepackage
 Donate link: https://www.paypal.me/littlepackage
-Tags: comment, excerpt, feedback, guest, guestbook, page, post, recent, testimonial, widget, specific, avatar, gravatar
+Tags: testimonial, feedback, comment, excerpt, guestbook
 Requires at least: 4
-Tested up to: 5.2.2
-Stable tag: 2.0.1
-Text Domain: post-specific-comments-widget
+Tested up to: 5.3.2
+Stable tag: 2.1
 License: GPLv3 or later
-License URI: http://www.opensource.org/licenses/gpl-license.php
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-This super lightweight plugin allows you to specify a post/page ID to display the comments for in a widget. This can come in very handy when trying to showcase the comments from a single post or page, such as customer feedback, testimonials, or guestbook. It can also be set to show all comments, with formatting options and optional avatars.
+This lightweight plugin allows you to show comments for a specific post/page ID in a widget. 
+
+This can come in very handy when trying to showcase the comments from a single post or page, such as customer feedback, testimonials, or guestbook. It can also be set to show all comments, with formatting options and optional avatars.
 
 Allows you to list comments in default manner (by Author and Post Title) or by Author and a variable-character excerpt and ellipsis (or other chosen trailing characters). Two new post formats to version 1.1 are (Excerpt) and (Excerpt) - (Author). Version 1.2 added shortcodes so users can create their own formats! Version 1.2.4 adds an Avatar/Gravatar shortcode.
 
@@ -21,21 +22,23 @@ Thanks for downloading; I hope this can help you. If this really helped you, and
 
 1. Upload post-specific-comments-widget.php to the /wp-content/plugins/ directory
 2. Activate plugin through the 'Plugins' menu in Wordpress
-3. Edit settings under Appearance>Widgets (Hint: add the Post-Specific Comments widget to your sidebar).
+3. Edit settings under Appearance -> Widgets (Hint: add the Post-Specific Comments widget to your sidebar).
 
-The ID number can be found by hovering over the post or page title while in the "All Pages" or "All Posts" list view Wordpress panels. The number will show itself after "post=" in your browser's add-on bar (usually at the lower left hand corner of the screen).
+The ID number can be found by hovering over the post or page title while in the "All Pages" or "All Posts" list view Wordpress panels. The number will show itself after "post=" in your browser's add-on bar (usually at the lower left hand corner of the screen). If you are editing the desired post, the ID number will show in the URL bar.
 
 You don't have to limit the comments to one post or page, though. You can show all your posts/pages by typing in the number 0 (zero) instead of a post number.
 
 == Frequently Asked Questions ==
 
-If you have questions, don't hesitate to ask.
+If you have questions or requests, don't hesitate to ask. 
 
 = How do I use the shortcodes? = 
 
 If you want to customize the way your comment is printed out, you can use the following shortcodes as placeholders for the intended output: [AUTHOR], [TITLE], [EXCERPT], [DATE].
 
 So for example, if you choose the "other" format, you could then enter "Comment by ~[AUTHOR]~ on [DATE]" and the plugin would magically replace the shortcodes with the author name/link, surrounded by tildes/swiggles, and then the date. 
+
+You can also use some limited HTML to further style the format.
 
 = How do I use the avatar shortcode? =
 
@@ -45,18 +48,6 @@ So for example, if you choose the "other" format, you could then enter "Comment 
 [AVATAR48] and [AVATR 80] will not display avatars because they are not typed correctly.
 
 Avatars will need styling depending on your Wordpress theme. There are ample CSS tags to get them where you want them. Avatar display depends on your avatar settings in Wordpress -> Settings -> Discussion
-
-= How can I remove the .recentcomments a CSS from the header? =
-
-Add the following lines to your (child theme) functions.php file:
-
-`function pscw_remove_recent_comments_style() {
-	global $wp_widget_factory;
-	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );  
-	remove_action( 'wp_head', array( $wp_widget_factory->widgets['Post_Specific_Comments_Widget'], 'pscw_recent_comments_style' ) );
-}  
-add_action( 'widgets_init', 'pswc_remove_recent_comments_style' );`
-
 
 == Screenshots ==
 
@@ -79,6 +70,9 @@ Wordpress 4.3 ready
 
 = 1.2 = 
 Shortcodes added!
+
+= 2.0.2 = 
+Recommend upgrade to version 2.0.2 for security enhancements; compatible with WP 5.3.2
 
 == Changelog ==
 
@@ -137,3 +131,13 @@ Shortcodes added!
 = 2.0.1 July 30 2019 =
 * Testing to WP 5.2.2
 * Update author & plugin URI
+
+= 2.1 January 21 2020 = 
+* Testing to WP 5.3.2
+* HTML escape translated text strings, sanitize string input more carefully
+* Rename translation files to work, and update
+* Remove .recentcomments CSS from wp_head
+* Fix for missing $aRecentAvatar value when using "other format" style 
+* use en dash instead of hyphen for "excerpt – author" format (more visible)
+* labels work for radio input fields on backend
+* 'pscw_filter_output' filter added to further adjust output before sending to screen
