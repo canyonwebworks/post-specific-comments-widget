@@ -1,11 +1,11 @@
 === Post-Specific Comments Widget (PSCW) ===
-Contributors: littlepackage
-Donate link: https://www.paypal.me/littlepackage
+Contributors: canyonwebworks
+Donate link: https://www.paypal.me/canyonwebworks
 Tags: testimonial, feedback, comment, excerpt, guestbook
 Requires at least: 4
 Requires PHP: 5.4
-Tested up to: 5.5
-Stable tag: 2.2
+Tested up to: 7.0
+Stable tag: 2.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -65,6 +65,10 @@ Avatars will need styling depending on your Wordpress theme. There are ample CSS
 Recommend upgrade to version 2.0.2 for security enhancements; compatible with WP 5.3.2
 
 == Changelog ==
+
+= 2.3 =
+* Update author links
+* Testing with WP 7.0
 
 = 2.2 =
 * Feature - Parent class WP_Widget HTML5 format now possible

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Post-Specific Comments Widget (PSCW) v1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-03 09:03-0800\n"
-"PO-Revision-Date: 2020-12-03 09:04-0800\n"
+"POT-Creation-Date: 2026-06-25 16:53-0600\n"
+"PO-Revision-Date: 2026-06-25 16:53-0600\n"
 "Last-Translator: littlepackage <cap@little-package.com>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -11,85 +11,85 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.8\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
 # @ pscw
-#: post-specific-comments-widget.php:53
+#: post-specific-comments-widget.php:48
 msgid "The most recent comments for a specific post"
 msgstr "Los comentarios más recientes para una publicación específica"
 
 # @ pscw
-#: post-specific-comments-widget.php:56
+#: post-specific-comments-widget.php:51
 msgid "Post-Specific Comments"
 msgstr "Comentarios post-específicos"
 
 # @ pscw
-#: post-specific-comments-widget.php:86
+#: post-specific-comments-widget.php:82
 msgid "Recent Comments"
 msgstr "Comentarios recientes"
 
 # @ pscw
-#: post-specific-comments-widget.php:155
+#: post-specific-comments-widget.php:151
 #, php-format
 msgid "%1$s on %2$s"
 msgstr "%1$s en %2$s"
 
 # @ pscw
-#: post-specific-comments-widget.php:159
+#: post-specific-comments-widget.php:155
 #, php-format
 msgid "<span class=\"recentcommentsauthor\">%1$s</span> said %2$s"
 msgstr "<span class=\"recentcommentsauthor\">%1$s</span> dicho %2$s"
 
-#: post-specific-comments-widget.php:167
+#: post-specific-comments-widget.php:163
 #, php-format
 msgid "<span class=\"recentcommentstitle\">%1$s</span> &ndash; %2$s"
 msgstr "<span class=\"recentcommentstitle\">%1$s</span> – %2$s"
 
-#: post-specific-comments-widget.php:252
+#: post-specific-comments-widget.php:248
 msgid "Display Title"
 msgstr "Mostrar el título"
 
 # @ pscw
-#: post-specific-comments-widget.php:255
+#: post-specific-comments-widget.php:251
 msgid "Number of Comments to Show"
 msgstr "Número de comentarios que se mostrarán"
 
 # @ pscw
-#: post-specific-comments-widget.php:258
+#: post-specific-comments-widget.php:254
 msgid "Post/Page ID Number"
 msgstr "Número de identificación de la publicación/página"
 
 # @ pscw
-#: post-specific-comments-widget.php:263
+#: post-specific-comments-widget.php:259
 msgid "Comment Format"
 msgstr "Formato de comentario"
 
-#: post-specific-comments-widget.php:265
+#: post-specific-comments-widget.php:261
 msgid "(Author) on (Post Title)"
 msgstr "(Autor) en (Título posterior)"
 
-#: post-specific-comments-widget.php:266
+#: post-specific-comments-widget.php:262
 msgid "(Author) said (Excerpt)"
 msgstr "(Autor) dijo (Extracto)"
 
-#: post-specific-comments-widget.php:267
+#: post-specific-comments-widget.php:263
 msgid "(Excerpt) &ndash; (Author)"
 msgstr "(Extracto) &ndash; (Autor)"
 
-#: post-specific-comments-widget.php:268
+#: post-specific-comments-widget.php:264
 msgid "(Excerpt)"
 msgstr "(Extracto)"
 
-#: post-specific-comments-widget.php:269
+#: post-specific-comments-widget.php:265
 msgid "Other format:"
 msgstr "Otro formato:"
 
-#: post-specific-comments-widget.php:275
+#: post-specific-comments-widget.php:271
 msgid ""
 "Use text &amp; shortcodes, no CSS/JS/HTML except &lt;p&gt;, &lt;br /&gt;, "
 "&lt;strong&gt;, &lt;ul&gt;, &lt;li&gt;, and &lt;em&gt;."
@@ -97,7 +97,7 @@ msgstr ""
 "Utilice texto y shortcodes, sin CSS/JS/HTML excepto &lt;p&gt;, &lt;br /&gt;, "
 "&lt;strong&gt;, &lt;ul&gt;, &lt;li&gt;, and &lt;em&gt;."
 
-#: post-specific-comments-widget.php:276
+#: post-specific-comments-widget.php:272
 msgid ""
 "Shortcodes are: [AUTHOR], [TITLE], [LINKED-TITLE], [EXCERPT], [DATE], "
 "[AVATAR]."
@@ -105,33 +105,33 @@ msgstr ""
 "Los shortcodes son: [AUTHOR], [TITLE], [LINKED-TITLE], [EXCERPT], [DATE], "
 "[AVATAR]."
 
-#: post-specific-comments-widget.php:277
+#: post-specific-comments-widget.php:273
 msgid "Refer to plugin readme.txt file for more info."
 msgstr ""
 "Consulte el archivo readme.txt del plugin para obtener más información."
 
 # @ pscw
-#: post-specific-comments-widget.php:280
+#: post-specific-comments-widget.php:276
 msgid "Excerpt Length"
 msgstr "Longitud del extracto"
 
 # @ pscw
-#: post-specific-comments-widget.php:283
+#: post-specific-comments-widget.php:279
 msgid "Excerpt Trailing"
 msgstr "Excerpt Trailing"
 
-#: post-specific-comments-widget.php:287
+#: post-specific-comments-widget.php:283
 #, php-format
 msgid ""
-"Please support hard working volunteer Wordpress developers with <a href="
-"\"%1$s\" target=\"_blank\" rel=\"noopener\">small donations</a> and/or <a "
-"href=\"%2$s\" target=\"_blank\" rel=\"noopener\">plugin reviews</a>. Thank "
-"you!"
+"Please support hard working volunteer Wordpress developers with <a "
+"href=\"%1$s\" target=\"_blank\" rel=\"noopener\">small donations</a> and/or "
+"<a href=\"%2$s\" target=\"_blank\" rel=\"noopener\">plugin reviews</a>. "
+"Thank you!"
 msgstr ""
 "Por favor, apoyar a los desarrolladores voluntarios de Wordpress de trabajo "
 "duro con <a href=\"%1$s\" target=\"_blank\" rel=\"noopener\">pequeñas "
-"donaciones</a> y / o <a href=\"%2$s\" target=\"_blank\" rel=\"noopener"
-"\">comentarios de plugins.</a> ¡Gracias!"
+"donaciones</a> y / o <a href=\"%2$s\" target=\"_blank\" "
+"rel=\"noopener\">comentarios de plugins.</a> ¡Gracias!"
 
 #. Plugin Name of the plugin/theme
 msgid "Post-Specific Comments Widget (PSCW)"
@@ -149,5 +149,5 @@ msgstr ""
 "gravatars."
 
 #. Author of the plugin/theme
-msgid "Little Package"
+msgid "Canyon Webworks"
 msgstr ""

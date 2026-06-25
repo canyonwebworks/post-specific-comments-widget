@@ -149,5 +149,5 @@ msgstr ""
 "uniques, et comprend des gravatars."
 
 #. Author of the plugin/theme
-msgid "Little Package"
+msgid "Canyon Webworks"
 msgstr ""

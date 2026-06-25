@@ -1,120 +1,119 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Post-Specific Comments Widget (PSCW)\n"
-"POT-Creation-Date: 2020-12-03 09:03-0800\n"
+"POT-Creation-Date: 2026-06-25 16:53-0600\n"
 "PO-Revision-Date: 2020-01-21 12:39-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: post-specific-comments-widget.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: post-specific-comments-widget.php:53
+#: post-specific-comments-widget.php:48
 msgid "The most recent comments for a specific post"
 msgstr ""
 
-#: post-specific-comments-widget.php:56
+#: post-specific-comments-widget.php:51
 msgid "Post-Specific Comments"
 msgstr ""
 
-#: post-specific-comments-widget.php:86
+#: post-specific-comments-widget.php:82
 msgid "Recent Comments"
 msgstr ""
 
-#: post-specific-comments-widget.php:155
+#: post-specific-comments-widget.php:151
 #, php-format
 msgid "%1$s on %2$s"
 msgstr ""
 
-#: post-specific-comments-widget.php:159
+#: post-specific-comments-widget.php:155
 #, php-format
 msgid "<span class=\"recentcommentsauthor\">%1$s</span> said %2$s"
 msgstr ""
 
-#: post-specific-comments-widget.php:167
+#: post-specific-comments-widget.php:163
 #, php-format
 msgid "<span class=\"recentcommentstitle\">%1$s</span> &ndash; %2$s"
 msgstr ""
 
-#: post-specific-comments-widget.php:252
+#: post-specific-comments-widget.php:248
 msgid "Display Title"
 msgstr ""
 
-#: post-specific-comments-widget.php:255
+#: post-specific-comments-widget.php:251
 msgid "Number of Comments to Show"
 msgstr ""
 
-#: post-specific-comments-widget.php:258
+#: post-specific-comments-widget.php:254
 msgid "Post/Page ID Number"
 msgstr ""
 
-#: post-specific-comments-widget.php:263
+#: post-specific-comments-widget.php:259
 msgid "Comment Format"
 msgstr ""
 
-#: post-specific-comments-widget.php:265
+#: post-specific-comments-widget.php:261
 msgid "(Author) on (Post Title)"
 msgstr ""
 
-#: post-specific-comments-widget.php:266
+#: post-specific-comments-widget.php:262
 msgid "(Author) said (Excerpt)"
 msgstr ""
 
-#: post-specific-comments-widget.php:267
+#: post-specific-comments-widget.php:263
 msgid "(Excerpt) &ndash; (Author)"
 msgstr ""
 
-#: post-specific-comments-widget.php:268
+#: post-specific-comments-widget.php:264
 msgid "(Excerpt)"
 msgstr ""
 
-#: post-specific-comments-widget.php:269
+#: post-specific-comments-widget.php:265
 msgid "Other format:"
 msgstr ""
 
-#: post-specific-comments-widget.php:275
+#: post-specific-comments-widget.php:271
 msgid ""
 "Use text &amp; shortcodes, no CSS/JS/HTML except &lt;p&gt;, &lt;br /&gt;, "
 "&lt;strong&gt;, &lt;ul&gt;, &lt;li&gt;, and &lt;em&gt;."
 msgstr ""
 
-#: post-specific-comments-widget.php:276
+#: post-specific-comments-widget.php:272
 msgid ""
 "Shortcodes are: [AUTHOR], [TITLE], [LINKED-TITLE], [EXCERPT], [DATE], "
 "[AVATAR]."
 msgstr ""
 
-#: post-specific-comments-widget.php:277
+#: post-specific-comments-widget.php:273
 msgid "Refer to plugin readme.txt file for more info."
 msgstr ""
 
-#: post-specific-comments-widget.php:280
+#: post-specific-comments-widget.php:276
 msgid "Excerpt Length"
 msgstr ""
 
-#: post-specific-comments-widget.php:283
+#: post-specific-comments-widget.php:279
 msgid "Excerpt Trailing"
 msgstr ""
 
-#: post-specific-comments-widget.php:287
+#: post-specific-comments-widget.php:283
 #, php-format
 msgid ""
-"Please support hard working volunteer Wordpress developers with <a href="
-"\"%1$s\" target=\"_blank\" rel=\"noopener\">small donations</a> and/or <a "
-"href=\"%2$s\" target=\"_blank\" rel=\"noopener\">plugin reviews</a>. Thank "
-"you!"
+"Please support hard working volunteer Wordpress developers with <a "
+"href=\"%1$s\" target=\"_blank\" rel=\"noopener\">small donations</a> and/"
+"or <a href=\"%2$s\" target=\"_blank\" rel=\"noopener\">plugin reviews</a>. "
+"Thank you!"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -129,5 +128,5 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Little Package"
+msgid "Canyon Webworks"
 msgstr ""
